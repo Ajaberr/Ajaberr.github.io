@@ -19,7 +19,8 @@ body{
   
     background-color:#f4f9fc;
     width: 95% !important;
-    min-height: 95vh !important;
+    min-height: fit-content !important;
+    height: 95vh;
     padding: 0 !important;
     margin-top: 2.5vh;
     display: flex;
@@ -489,8 +490,8 @@ a{
   }
 
   #languages img {
-    height: 20px !important;
-    width: 20px !important;
+    height: 35px !important;
+    width: 35px !important;
   }
 
 #writingskills p{
@@ -501,5 +502,22 @@ a{
     height: 20px !important;
     width: 20px !important;
     padding:4px!important;
+  }
+}
+
+
+@media screen and (max-width: 380px){
+  
+  #languages img {
+    height: 30px !important;
+    width: 30px !important;
+  }
+}
+
+@media screen and (max-width: 356px){
+  
+  #languages img {
+    height: 25px !important;
+    width: 25px !important;
   }
 }

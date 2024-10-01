@@ -20,7 +20,8 @@ body{
   
     background-color:#fdf7f7;
     width: 95% !important;
-    min-height: 95vh !important;
+    min-height: fit-content !important;
+    height: 95vh;
     padding: 0 !important;
     margin-top: 2.5vh !important;
     display: flex;
