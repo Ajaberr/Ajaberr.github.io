@@ -440,10 +440,7 @@ a{
 }
 
 @media screen and (max-width: 573px) {
-  #name h1 {
-    font-size: 20px !important;
-    padding-right:2.5px !important;
-  }
+ 
 
   #languages img {
     height: 50px !important;
@@ -468,12 +465,19 @@ a{
   .bluebox.fade-in #text a{
     font-size: 23px;
   }
+  #text{
+    width: 100%;
+  }
 
 }
-
+@media screen and (max-width: 513px) {
+  #name h1{
+    font-size: 27px !important;
+  }
+}
 @media screen and (max-width: 480px) {
   #name h1 {
-    font-size: 16px !important;
+    font-size: 22px !important;
   }
   #text h3 {
     font-size: 12px !important;
@@ -512,12 +516,22 @@ a{
     height: 30px !important;
     width: 30px !important;
   }
+  #name h1 {
+    font-size: 20px !important;
+    padding-right: 2px !important;
+  }
 }
+
+
 
 @media screen and (max-width: 356px){
   
   #languages img {
     height: 25px !important;
     width: 25px !important;
+  }
+  #name h1 {
+    font-size: 18px !important;
+    padding-right: 1px !important;
   }
 }
