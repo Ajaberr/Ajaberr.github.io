@@ -1,0 +1,203 @@
+<html>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script defer src="app.js"></script>
+
+<link href="./styleam.css" rel="stylesheet">
+<link rel="icon" type="image/png" href="Black and White Simple Personal Logo.png"> 
+
+
+<title>
+    Ahmed Jaber
+</title>
+
+<body>
+    <div class = "pinkbox"> 
+        <div id = "menu">
+            <div>
+                <img src="./Black and White Simple Personal Logo.png">
+                <a class = "vertical">|</a>
+                <a class="noto-sans spacing" id ="menuButton"> MENU</a>
+            </div>
+            <div>
+                <img src="./send.png" class="imageemail">
+                <a class="noto-sans spacing margin-text" href="mailto:amj2234@columbia.edu">CONTACT ME</a>
+            </div>
+           
+            
+        </div>
+        <div id = "main">
+            <h1 class = "noto-sans"><span>Ab</span>out Me</h1>
+            <p class = "noto-sans">I'm a US citizen who has lived in morocco for most of my life. I attended London Academy Casablanca, where I achieved a full ride and 4 A*s at A levels. I was heavily involved in extracurriculars both inside and outside school. I pride myself on being an <b>independent</b> and <b>quick learner</b>.</p>
+        </div>
+        
+    </div>
+    <div id = "traits">
+        <section class="trait">
+            <div class = "text" >
+                <h1 class = "noto-sans">Leadership</h1>
+                <p class = "noto-sans">I have led multiple school clubs and organizations, and was the <b>valedictorian</b>, delivering a memorable graduation speech.</p>
+            </div>
+            <div class="gallery">
+                <img src="Screenshot_20240930_102158_Gallery.jpg" alt="Club Leadership">
+                <iframe width="80%" height="auto" src="https://www.youtube.com/embed/SM-0S27KyUY?si=a47DgdQCrFMSRu3x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section class="trait">
+            <div class = "text">
+                <h1 class = "noto-sans">Team Player & Engineer</h1>
+                <p class = "noto-sans">Me and my team were able to achieve <b>first place</b> in the VEX Robotics competition nationally and qualified to be the only team to represent Morocco internationally.</p>
+            </div>
+            <div class="gallery">
+                <img src="20240930_093842.jpg" alt="VEX Robotics Team">
+                <img src="20240930_091419.png" alt="International Stage">
+            </div>
+        </section>
+
+        <section class="trait">
+            <div class = "text">
+                <h1 class = "noto-sans">Athlete</h1>
+                <p class = "noto-sans">Outside of coding, I enjoy playing soccer in my free time, it is a passion I have had since I was a young child. Here below are cute pictures of me😂:</p>
+            </div>
+            <div class="gallery">
+                <img src="soccer.jpg"  alt="Playing Soccer">
+                <img src="Screenshot_20240930_122910_Instagram.jpg" alt="Soccer Club">
+            </div>
+        </section>
+    </div>
+</body>
+</html>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuButton = document.getElementById('menuButton');
+      const pinkbox = document.querySelector('.pinkbox');
+      const textContent = document.getElementById('main');
+      const skills = document.getElementById('traits');
+      let menuopen = false;  // Track menu state
+  
+      const setMenuButtonListener = () => {
+          // Retrieve the new menuButton element and reattach the click event listener
+          const newMenuButton = document.getElementById('menuButton');
+  
+          newMenuButton.addEventListener('click', () => {
+              if (menuopen === false) {
+                  // Open menu: Add fade-in animation for the background color
+                  pinkbox.classList.add('fade-in');
+  
+                  // Update content with new menu
+                  pinkbox.innerHTML = `
+                  <div id = "menu">
+                      <div>
+                          <img src="./Black and White Simple Personal Logo.png">
+                          <a class = "vertical">|</a>
+                          <a class="noto-sans spacing" id ="menuButton"> BACK</a>
+                      </div>
+                  </div>
+                  <div id = "text">
+                      <div id="dropdownmen">
+                          <div class="mendesc">
+                              <a id="Home" class="noto-sans" href = "./index.html"> Home </a>
+                              <h3 class="noto-sans"> Return back </h3>
+                          </div>
+                          <div class="mendesc" >   
+                              <a class="noto-sans" href = "./projects.html"> Projects </a>
+                              <h3 class="noto-sans">A portfolio of my projects </h3>
+                          </div>
+                          <div class="mendesc">
+                              <a class="noto-sans" id = "aboutme1"> About Me </a>
+                              <h3 class="noto-sans">More about my background and personality</h3>
+                          </div>
+                          <div id="socials">
+                              <a href="https://github.com/Ajaberr"><img src="github.png" height="25" width="25"></a>
+                              <a href="https://www.linkedin.com/in/ahmed-jaber-98ab65162/"><img src="linkedin.png" height="25" width="25"></a>
+                              <a href="https://app.joinhandshake.com/profiles/61825612"><img src="./handshake-removebg-preview.png" height="25" width="25"></a>
+                          </div>
+                      </div>
+                  </div>
+                  `;
+  
+                  skills.style.display = 'none';
+  
+                  // Add back the menu button event listener after updating innerHTML
+                  setMenuButtonListener();
+  
+                  // Re-select the "Projects" element and add event listener after the content is updated
+                  const projectsButton = document.getElementById('aboutme1');
+                  projectsButton.addEventListener('click', () => {
+                      pinkbox.classList.remove('fade-in');
+                      pinkbox.innerHTML = `
+                    <div id = "menu">
+                        <div>
+                            <img src="./Black and White Simple Personal Logo.png">
+                            <a class = "vertical">|</a>
+                            <a class="noto-sans spacing" id ="menuButton"> MENU</a>
+                        </div>
+                        <div>
+                            <img src="./send.png" class="imageemail">
+                            <a class="noto-sans spacing margin-text" href="mailto:amj2234@columbia.edu">CONTACT ME</a>
+                        </div>
+                    
+                        
+                    </div>
+                    
+                    <div id = "main">
+                        <h1 class = "noto-sans"><span>Ab</span>out Me</h1>
+                        <p class = "noto-sans">I'm a US citizen who has lived in morocco for most of my life. I attended London Academy Casablanca, where I achieved a full ride and 4 A*s at A levels. I was heavily involved in extracurriculars both inside and outside school. I pride myself on being an <b>independent</b> and <b>quick learner</b>.</p>
+                    </div>
+                      `;
+                      skills.style.display = 'block';
+  
+                      setMenuButtonListener();  // Reattach listener after menu reset
+                      menuopen = false;  // Set menu as closed
+                  });
+  
+                  menuopen = true;  // Set menu as open
+              } else {
+                  // Close menu: Revert to original content
+                  pinkbox.classList.remove('fade-in');
+  
+                  pinkbox.innerHTML = `
+                    <div id = "menu">
+                        <div>
+                            <img src="./Black and White Simple Personal Logo.png">
+                            <a class = "vertical">|</a>
+                            <a class="noto-sans spacing" id ="menuButton"> MENU</a>
+                        </div>
+                        <div>
+                            <img src="./send.png" class="imageemail">
+                            <a class="noto-sans spacing margin-text" href="mailto:amj2234@columbia.edu">CONTACT ME</a>
+                        </div>
+                    
+                        
+                    </div>
+                    
+                    <div id = "main">
+                        <h1 class = "noto-sans"><span>Ab</span>out Me</h1>
+                        <p class = "noto-sans">I'm a US citizen who has lived in morocco for most of my life. I attended London Academy Casablanca, where I achieved a full ride and 4 A*s at A levels. I was heavily involved in extracurriculars both inside and outside school. I pride myself on being an <b>independent</b> and <b>quick learner</b>.</p>
+                    </div>
+                  `;
+                  skills.style.display = 'block';
+  
+                  setMenuButtonListener();  // Reattach listener after menu reset
+                  menuopen = false;  // Set menu as closed
+              }
+          });
+      };
+  
+      setMenuButtonListener();  // Attach the initial menu button listener
+  
+     
+      
+    
+  
+  });
+  
+  
+  
+  </script>
+  

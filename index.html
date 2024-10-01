@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script defer src="app.js"></script>
+
+<link href="./style.css" rel="stylesheet">
+<link rel="icon" type="image/png" href="Black and White Simple Personal Logo.png"> 
+
+
+<title>
+    Ahmed Jaber
+</title>
+
+<body>
+    <div class = "bluebox"> 
+        <div id = "menu">
+            <div>
+                <img src="./Black and White Simple Personal Logo.png">
+                <a class = "vertical">|</a>
+                <a class="noto-sans spacing" id ="menuButton"> MENU</a>
+            </div>
+            <div>
+                <img src="./send.png" class="imageemail">
+                <a class="noto-sans spacing margin-text" href="mailto:amj2234@columbia.edu">CONTACT ME</a>
+            </div>
+           
+            
+        </div>
+        <div id = "main">
+            <div id = "text">
+                <div id = "name">
+                    <h1 class = "noto-sans">Hello, my  </h1>
+                    <h1 class = "noto-sans"> name is <b>Ahmed Jaber</b>.</h1>
+                </div>
+
+                <h3 class = "noto-sans">I am a <b>Computer Science student</b> at Columbia University, interested in applied Machine Learning.</h3>
+            </div>
+            <div id = "image">
+                <img src = "D1E7F1 (2).png">
+            </div>
+            
+        </div>
+        
+    </div>
+    <div id = "skills">
+        <div id = "writingskills">
+            <h1 class = "noto-sans">My Skills</h1>
+            <p class = "noto-sans">I have lots of experience with python and frontend development. I have worked on various machine learning and web development projects, also placing well in hackathons. </p>
+            <a href = "./projects.html"><button class = "noto-sans">Learn More</button></a>
+        </div>
+        <div id = "languages">
+            <img src = "python.png" height = 50 width = 50>
+            <img src = "machine-learning.png" height = 50 width = 50>
+            <img src = "html-file.png" height = 50 width = 50>
+            <img src = "css.png" height = 50 width = 50>
+            <img src = "javascript.png" height = 50 width = 50>
+        </div>
+
+    </div>
+</body>
+
+
+</html>
+<script>
+   document.addEventListener('DOMContentLoaded', () => {
+    const menuButton = document.getElementById('menuButton');
+    const bluebox = document.querySelector('.bluebox');
+    const textContent = document.getElementById('text');
+    const imageContent = document.getElementById('image');
+    const skills = document.getElementById('skills');
+    let menuopen = false;  // Track menu state
+
+    menuButton.addEventListener('click', () => {
+        if (menuopen === false) {
+            // Open menu: Add fade-in animation for the background color
+            bluebox.classList.add('fade-in');
+
+            // Update content with new menu
+            imageContent.innerHTML = ''; // Remove image
+            menuButton.innerHTML = 'BACK'; // Change button text
+            textContent.innerHTML = `
+            <div id="dropdownmen">
+                <div class="mendesc">
+                    <a id="Home" class="noto-sans"> Home </a>
+                    <h3 class="noto-sans"> Return back </h3>
+                </div>
+                <div class="mendesc" >   
+                    <a class="noto-sans" href = "./projects.html"> Projects </a>
+                    <h3 class="noto-sans">A portfolio of my projects </h3>
+                </div>
+                <div class="mendesc">
+                    <a class="noto-sans" href = "./aboutme.html"> About Me </a>
+                    <h3 class="noto-sans">More about my background and personality</h3>
+                </div>
+                <div id="socials">
+                    <a href="https://github.com/Ajaberr"><img src="github.png" height="25" width="25"></a>
+                    <a href="https://www.linkedin.com/in/ahmed-jaber-98ab65162/"><img src="linkedin.png" height="25" width="25"></a>
+                    <a href="https://app.joinhandshake.com/profiles/61825612"><img src="./handshake-removebg-preview.png" height="25" width="25"></a>
+                </div>
+            </div>
+            `;
+            skills.style.display = 'none';
+
+            // Re-select the "Home" element and add event listener after the content is updated
+            const home = document.getElementById('Home');
+            home.addEventListener('click', () => {
+                bluebox.classList.remove('fade-in');
+                imageContent.innerHTML = '<img src="./D1E7F1 (2).png">';  // Restore image
+                menuButton.innerHTML = 'MENU';  // Reset button text
+                textContent.innerHTML = `
+                <div>
+                    <h1 class="noto-sans">Hello, my</h1>
+                    <h1 class="noto-sans">name is <b>Ahmed Jaber</b>.</h1>
+                    <h3 class="noto-sans">I am a <b>Computer Science student</b> at Columbia University, interested in applied Machine Learning.</h3>
+                </div>
+                `;
+                skills.style.display = 'flex';
+
+                menuopen = false;  // Set menu as closed
+            });
+
+            // Add fade-in effect for the text and social icons
+            textContent.style.opacity = "1";
+            const socialIcons = document.querySelectorAll('#socials img');
+            socialIcons.forEach((icon, index) => {
+                icon.style.animationDelay = `${index * 0.2}s`; // Staggered entrance for social icons
+            });
+
+            menuopen = true;  // Set menu as open
+        } else {
+            // Close menu: Revert to original content
+            bluebox.classList.remove('fade-in');
+            imageContent.innerHTML = '<img src="./D1E7F1 (2).png">';  // Restore image
+            menuButton.innerHTML = 'MENU';  // Reset button text
+            textContent.innerHTML = `
+            <div>
+                <h1 class="noto-sans">Hello, my</h1>
+                <h1 class="noto-sans">name is <b>Ahmed Jaber</b>.</h1>
+                <h3 class="noto-sans">I am a <b>Computer Science student</b> at Columbia University, interested in applied Machine Learning.</h3>
+            </div>
+            `;
+            skills.style.display = 'flex';
+
+            menuopen = false;  // Set menu as closed
+        }
+    });
+});
+
+
+</script>
