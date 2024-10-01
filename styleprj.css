@@ -1,0 +1,726 @@
+html{
+    width: 100% !important;
+    height: auto!important;
+   
+
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0% !important;
+    
+}
+.greenbox{
+  
+    background-color:#F7F8F9;
+    width: 95% !important;
+    min-height: fit-content !important;
+    height: 95vh;
+    padding: 0 !important;
+    margin-top: 2.5vh;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 1s ease-in-out; /* Animation for color transition */
+  
+    
+
+
+}
+
+
+.noto-sans{
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: #2D484B;
+  }
+a{
+    font-size: 20px;
+    text-decoration: none;
+  }
+  .noto-sans b{
+    font-weight: bolder;
+  }
+
+  #main h1{
+    font-size: 65px;
+    font-weight:900;
+    padding-left: 5%;
+    margin: 0px !important;
+    padding-bottom: 50px;
+  }
+
+  #main p{
+    font-size: 25px;
+    font-weight: 350 !important;
+    max-width: 80%;
+    padding-left: 5%;
+    margin: 0px !important;
+  }
+  h3{
+    font-size: 28px;
+  }
+
+  #main span{
+    border-bottom: 4px solid #91C8D9 !important;
+    padding-bottom: 30px;
+  }
+  
+  #main{
+    display: flex;
+    flex-direction: column !important;
+    min-height: 85vh;
+    width:100%;
+    justify-content: center;
+  }
+
+  #menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 10vh !important;
+  }
+
+
+  #menu div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+  }
+
+  #menu img{
+    height: 130px;
+    width: 80px;
+    padding-left: 10px;
+    object-fit:cover;
+   
+  }
+
+  .spacing {
+    letter-spacing: 3px;
+    transition: letter-spacing 0.3s ease; /* Smooth transition */
+    display: inline-block; /* Treats each letter individually */
+  }
+
+  .vertical{
+    font-size: 40px;
+    font-weight: 100 !important;
+    margin-right: 10px ;
+  }
+  
+  .spacing:hover {
+    letter-spacing: 8px;
+    cursor: pointer; 
+  }
+
+  .margin-text{
+    padding-right: 20px;
+  }
+
+  .imageemail{
+    height: 30px !important;
+    width: 30px !important;
+    color:white;
+    padding-right: 20px;
+  }
+
+/* Table of Contents Styling */
+#toc {
+    background-color: #F2F6F7;
+    border-left: 5px solid #91C8D9;
+    padding: 20px;
+    margin: 20px 0;
+    width: 500px;
+    min-width: 500px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#toc:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Title of the ToC */
+#toc h3 {
+    font-size: 30px;
+    color: #2D484B;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #91C8D9;
+    padding-bottom: 10px;
+}
+
+/* Styling the list of items */
+.toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Styling individual list items */
+.toc-list li {
+    margin: 12px 0;
+    font-size: 22px;
+    transition: transform 0.2s ease, color 0.3s ease;
+    opacity: 0;
+    animation: fadeInUp 0.5s forwards;
+    animation-delay: calc(0.1s * var(--i));
+}
+
+.toc-list li:nth-child(1) {
+    --i: 1;
+}
+.toc-list li:nth-child(2) {
+    --i: 2;
+}
+.toc-list li:nth-child(3) {
+    --i: 3;
+}
+.toc-list li:nth-child(4) {
+    --i: 4;
+}
+.toc-list li:nth-child(5) {
+    --i: 5;
+}
+
+/* Links inside the list */
+.toc-list li a {
+    text-decoration: none;
+    color: #2D484B;
+    padding: 5px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
+    width: 100%;
+}
+
+/* Hover effect for list items */
+.toc-list li a:hover {
+    background-color: #91C8D9;
+    color: white;
+    padding-left: 15px;
+}
+
+/* Keyframe animations */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+#table{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 100px;
+    flex-wrap: wrap;
+} 
+#table h1{
+    font-size: 60px;
+    width: 30%;
+    padding-right: 50px;
+    font-weight: 800;
+}
+
+#Projects{
+    width: 95% !important;
+    height: auto;
+    background-color:#F7F8F9 !important;
+}
+
+
+#section1{
+    display: flex;
+    flex-direction: row;
+    min-height:100vh;
+    width:100%;
+    background-color:#F7F8F9 !important;
+    justify-content: space-evenly;
+}
+.text{
+    height:100vh;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center !important;
+}
+
+
+
+.text h1{
+    font-size: 50px;
+    font-weight: 600;
+    padding-left: 30px;
+}
+
+.text p{
+    padding-left: 30px;
+    font-size: 16px;
+}
+
+.text a{
+    font-weight: 800;
+    font-size: 15px;
+}
+.image{
+    width: 40%;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.image img{
+    width:100%;
+    height: auto;
+}
+
+.image frame{
+  width:100%;
+  height: auto;
+}
+.bold{
+    font-weight: 800;
+}
+
+a{text-decoration:  none;}
+
+
+
+#section2{
+    display: flex;
+    flex-direction: row;
+    min-height:100vh;
+    width:100%;
+    background-color:#F7F8F9 !important;
+    justify-content: space-evenly;
+}
+
+/* This is for dropdown */
+.new-section {
+  padding: 20px;
+  background-color: #e0f2f1;
+  margin: 10px;
+  border-radius: 8px;
+  font-size: 18px;
+  opacity: 0;
+  transform: translateX(-100%); /* Slide in from left */
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.new-section.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+@keyframes fadeInBackground {
+0% {
+  background-color: #f4f9fc;  /* Start with original color */
+  transform: translateY(-100%); /* Start from top */
+}
+100% {
+  background-color: #aed8c0; /* End with the target color */
+  transform: translateY(0); /* End at normal position */
+}
+}
+
+
+.greenbox {
+background-color:#F7F8F9;; /* Default color */
+transition: background-color 1s ease-in-out;
+}
+
+.greenbox.fade-in {
+animation: fadeInBackground 1s ease-in-out forwards;
+background-color: #aed8c0; /* Ensure the background color stays after the animation */
+overflow-y: hidden;
+}
+
+
+@keyframes fadeInSocials {
+0% {
+  opacity: 0;
+  transform: translateY(50px); /* Start below */
+}
+100% {
+  opacity: 1;
+  transform: translateY(0); /* End at normal position */
+}
+}
+
+@keyframes fadeInText {
+0% {
+  opacity: 0;
+  transform: translateX(-50px); /* Start from left */
+}
+100% {
+  opacity: 1;
+  transform: translateX(0); /* End at normal position */
+}
+}
+
+
+#socials img {
+opacity: 0;
+animation: fadeInSocials 1s ease forwards; /* Animation will start once triggered */
+}
+
+#main {
+opacity: 0;
+animation: fadeInText 1s ease-in-out forwards; /* Triggered when menu is clicked */
+}
+
+
+#text{
+  width:50%;
+  height: 85vh !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+  margin: 0 !important;
+  padding: 0 !important;
+
+}
+
+#text #name{
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#text div h1{
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#text {
+  opacity: 0;
+  animation: fadeInText 1s ease-in-out forwards; /* Triggered when menu is clicked */
+}
+
+#dropdownmen{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction:column;
+  justify-content: space-evenly !important;
+  
+  
+
+}
+
+#dropdownmen .mendesc a{ 
+  font-size: 35px;
+  font-weight: 900;
+  width:50%;
+  text-align: center;
+}
+#dropdownmen .mendesc a:hover{ 
+  color:white;
+  cursor: pointer; 
+}
+#socials{
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center;
+
+}
+#socials a{
+  padding:30px;
+  transition:cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#socials a:hover{
+  transform: translate(0, -5px);
+}
+
+.mendesc{
+  display: flex;
+  flex-direction: row;
+  width: 100% !important;
+ 
+}
+.mendesc h3{
+  font-size: 15px;
+  width: 50%;
+}
+
+/* This is for dropdown */
+
+
+
+#section3{
+  display: flex;
+  flex-direction: row;
+  min-height:100vh;
+  width:100%;
+  background-color:#F7F8F9 !important;
+  justify-content: space-evenly;
+}
+
+
+
+.image .image1{
+  width:100%;
+  height: auto;
+}
+
+
+
+
+#section4{
+  display: flex;
+  flex-direction: row;
+  min-height:100vh;
+  width:100%;
+  background-color:#F7F8F9 !important;
+  justify-content: space-evenly;
+}
+
+
+#section5{
+  display: flex;
+  flex-direction: row;
+  min-height:100vh;
+  width:100%;
+  background-color:#F7F8F9 !important;
+  justify-content: space-evenly;
+}
+
+
+
+/* MORE ANIMATIONS */
+/* Zoom-in effect for images */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Pulse effect for contact icon */
+.imageemail {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.1);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+
+
+
+/* Smooth hover effect for links */
+.mendesc .noto-sans {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.mendesc .noto-sans:hover {
+  color: #3498db;
+  transform: translateY(-3px);
+}
+
+/* Table of contents animation */
+#toc li {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+#toc li:nth-child(1) {
+  transition-delay: 0.1s;
+}
+#toc li:nth-child(2) {
+  transition-delay: 0.2s;
+}
+#toc li:nth-child(3) {
+  transition-delay: 0.3s;
+}
+#toc li:nth-child(4) {
+  transition-delay: 0.4s;
+}
+#toc li:nth-child(5) {
+  transition-delay: 0.5s;
+}
+
+#toc li.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Animate images when they come into view */
+.image img, .image1 {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.image img.visible, .image1.visible {
+  opacity: 1;
+  transform: scale(1);
+  
+}
+
+
+/* Smooth transition for images in the main sections */
+#Projects {
+  transition: opacity 0.5s ease-in-out;
+}
+
+/** Media Queries **/
+@media screen and (max-width: 1320px) {
+ 
+  #toc{
+    width: 50%;
+    min-width: 300px !important;
+  }
+  #section4 .image{
+    width:40% !important;
+    height: auto !important;
+  }
+  #section4 iframe{
+    width:90%;
+  }
+  
+}
+
+@media screen and (max-width: 900px) {
+  #Projects div{
+    padding-bottom: 40px;
+    
+  }
+  
+  #section1, #section3, #section5{
+    width: 100%;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    
+  }
+
+  #section4 .image{
+    width:90% !important;
+    height: auto !important;
+  }
+  .text{
+    width:90%;
+    height: auto;
+  }
+  .image{
+    width:90%;
+    height: auto;
+    align-items: center;
+    padding-top:20px;
+  }
+  .image img{
+    width:90%;
+  }
+
+ 
+  
+  #section2, #section4{
+    width: 100%;
+    flex-wrap: wrap-reverse;
+    min-height: 100vh;
+    
+  }
+#table h1{
+  font-size: 40px;
+}
+
+.greenbox.fade-in #text{
+  padding-left: 10px;
+  width: 100%;
+}
+
+
+.greenbox.fade-in #text{
+  justify-content: center;
+}
+
+}
+
+@media screen and (max-width: 600px) {
+  #table h1{
+width: 80%;
+text-align: center;  }
+
+.text h1{
+  font-size: 40px;
+}
+#menu a {
+  font-size: 15px;
+}
+#menu img, .imageemail {
+  height: 100px;
+  width: 100px;
+}
+.greenbox.fade-in #text a{
+  font-size: 23px;
+}
+
+}
+
+@media screen and (max-width: 480px){
+ 
+  #main p{
+    font-size: 20px;
+  }
+  #menu a {
+    font-size: 12px;
+  }
+  #toc{
+    width: 50%;
+    min-width: 250px !important;
+  }
+
+  .text h1{
+    font-size: 30px;
+  }
+  .text p{
+    font-size: 12px;
+  }
+
+  #menu img {
+    height: 50px;
+    width: 50px;
+  }
+  .imageemail {
+    height: 20px !important;
+    width: 20px !important;
+    padding:4px!important;
+  }
+  #main h1{
+    font-size: 40px;
+  }
+  .greenbox.fade-in #text h3{
+    font-size: 12px;
+  }
+}

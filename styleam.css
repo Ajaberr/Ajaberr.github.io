@@ -1,0 +1,474 @@
+/* General Styles */
+html{
+    width: 100% !important;
+    height: auto!important;
+   
+
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    
+}
+.pinkbox{
+  
+    background-color:#fdf7f7;
+    width: 95% !important;
+    min-height: fit-content !important;
+    height: 95vh;
+    padding: 0 !important;
+    margin-top: 2.5vh !important;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 1s ease-in-out; /* Animation for color transition */
+  
+
+
+}
+
+
+.noto-sans{
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: #181c5c;
+  }
+a{
+    font-size: 20px;
+    text-decoration: none;
+  }
+  .noto-sans b{
+    font-weight: bolder;
+  }
+
+  #main h1{
+    font-size: 65px;
+    font-weight:900;
+    padding-left: 5%;
+  }
+
+  #main p{
+    font-size: 25px;
+    font-weight: 350 !important;
+    max-width: 80%;
+    padding-left: 5%;
+  }
+  h3{
+    font-size: 28px;
+  }
+
+  #main span{
+    border-bottom: 4px solid #91C8D9 !important;
+    padding-bottom: 30px;
+  }
+  
+  #main{
+    display: flex;
+    flex-direction: column !important;
+    min-height:85vh;
+    width:100%;
+    justify-content: center;
+
+  }
+
+  #menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 10vh !important;
+  }
+
+
+  #menu div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+  }
+
+  #menu img{
+    height: 130px;
+    width: 80px;
+    padding-left: 10px;
+    object-fit:cover;
+   
+  }
+
+  .spacing {
+    letter-spacing: 3px;
+    transition: letter-spacing 0.3s ease; /* Smooth transition */
+    display: inline-block; /* Treats each letter individually */
+  }
+
+  .vertical{
+    font-size: 40px;
+    font-weight: 100 !important;
+    margin-right: 10px ;
+  }
+  
+  .spacing:hover {
+    letter-spacing: 8px;
+    cursor: pointer; 
+  }
+
+  .margin-text{
+    padding-right: 20px;
+  }
+
+  .imageemail{
+    height: 30px !important;
+    width: 30px !important;
+    color:white;
+    padding-right: 20px;
+  }
+
+
+  #traits{
+    width: 95% !important;
+    height: auto;
+    background-color:#fdf7f7 !important;
+    display: flex;
+    flex-direction: column;
+   
+
+}
+
+.trait{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-bottom: 70px;
+   
+}
+
+.gallery{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height:60vh;
+    justify-content: center;
+}
+
+.text{
+    width: 100%;
+    height:auto;
+}
+.gallery img, .gallery iframe{
+    height: auto !important;
+    width: 40% !important;
+    padding: 30px;
+    border-radius: 50px !important;
+}
+
+
+
+
+
+.trait h1{
+    font-size: 50px;
+    font-weight: 600;
+    padding-left: 30px;
+}
+
+.trait p{
+    padding-left: 30px;
+    font-size: 25px;
+    max-width: 80%;
+}
+
+
+/* ANIMATIONS START HERE */
+
+#Projects {
+    transition: opacity 0.5s ease-in-out;
+  }
+
+
+  
+
+  
+/* This is for dropdown */
+.new-section {
+    padding: 20px;
+    background-color: #e0f2f1;
+    margin: 10px;
+    border-radius: 8px;
+    font-size: 18px;
+    opacity: 0;
+    transform: translateX(-100%); /* Slide in from left */
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+  }
+  
+  .new-section.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  
+  @keyframes fadeInBackground {
+  0% {
+    background-color: #fdf7f7;  /* Start with original color */
+    transform: translateY(-100%); /* Start from top */
+  }
+  100% {
+    background-color: #efc7d3; /* End with the target color */
+    transform: translateY(0); /* End at normal position */
+  }
+  }
+  
+  
+  .pinkbox {
+  background-color:#fdf7f7; /* Default color */
+  transition: background-color 1s ease-in-out;
+  }
+  
+  .pinkbox.fade-in {
+  animation: fadeInBackground 1s ease-in-out forwards;
+  background-color: #efc7d3; /* Ensure the background color stays after the animation */
+ 
+   margin-bottom: 100px !important; /* Adds 100px of padding at the bottom */
+  }
+  
+ 
+  
+  
+  
+  @keyframes fadeInSocials {
+  0% {
+    opacity: 0;
+    transform: translateY(50px); /* Start below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at normal position */
+  }
+  }
+  
+  @keyframes fadeInText {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px); /* Start from left */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* End at normal position */
+  }
+  }
+  
+  
+  
+
+  #socials img {
+  opacity: 0;
+  animation: fadeInSocials 1s ease forwards; /* Animation will start once triggered */
+  }
+  
+  #main {
+  opacity: 0;
+  animation: fadeInText 1s ease-in-out forwards; /* Triggered when menu is clicked */
+  }
+  
+  
+  #text{
+    width:50%;
+    min-height: 85vh!important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+    margin: 0 !important;
+    padding: 0 !important;
+  
+  }
+  
+  #text #name{
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  #text div h1{
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+
+  
+  #dropdownmen{
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-evenly !important;
+    
+    
+  
+  }
+  
+  #dropdownmen .mendesc a{ 
+    font-size: 35px;
+    font-weight: 900;
+    width:50%;
+    text-align: center;
+  }
+  #dropdownmen .mendesc a:hover{ 
+    color:white;
+    cursor: pointer; 
+  }
+  #socials{
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center;
+  
+  }
+  #socials a{
+    padding:30px;
+    transition:cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  
+  #socials a:hover{
+    transform: translate(0, -5px);
+  }
+  
+  .mendesc{
+    display: flex;
+    flex-direction: row;
+    width: 100% !important;
+   
+  }
+  .mendesc h3{
+    font-size: 15px;
+    width: 50%;
+  }
+  
+  /* This is for dropdown */
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  /* Pulse effect for contact icon */
+  .imageemail {
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+  }
+  
+  
+  
+  
+  /* Smooth hover effect for links */
+  .mendesc .noto-sans {
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .mendesc .noto-sans:hover {
+    color: white;
+    transform: translateY(-3px);
+  }
+  
+ 
+  
+@media screen and (max-width: 1300px) {
+  .pinkbox.fade-in #text{
+    padding-left: 10px;
+    width: 100% !important;
+  }
+  
+  
+  .pinkbox.fade-in #text{
+    justify-content: center;
+    align-items: center !important ;
+  }
+}
+  
+ 
+
+  @media screen and (max-width: 700px){
+    #menu a {
+      font-size: 15px;
+    }
+    #menu img, .imageemail {
+      height: 100px;
+      width: 100px;
+    }
+   
+    
+  }
+
+  @media screen and (max-width: 500px){
+  
+    #menu a {
+      font-size: 12px;
+    }
+    
+  #menu img {
+    height: 50px;
+    width: 50px;
+  }
+  .imageemail {
+    height: 20px !important;
+    width: 20px !important;
+    padding:4px!important;
+  }
+    
+    .text h1{
+      font-size: 30px;
+    }
+    .text p{
+      font-size: 20px;
+    }
+  #main h1{
+    font-size: 50px;
+  }
+  #main p{
+    font-size:15px;
+  }
+  .gallery{
+    min-height: 100vh !important;
+    flex-wrap: wrap;
+  }
+  .gallery img, .gallery iframe{
+    width:70% !important;
+    height: auto;
+    
+  }
+  .pinkbox.fade-in #text a{
+    font-size: 23px;
+  }
+
+}
+
+  

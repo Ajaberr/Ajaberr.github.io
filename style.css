@@ -1,0 +1,532 @@
+html{
+    width: 100% !important;
+    height: auto !important;
+   
+
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0% !important;
+    
+}
+.bluebox{
+  
+    background-color:#f4f9fc;
+    width: 95% !important;
+    min-height: fit-content !important;
+    height: 95vh;
+    padding: 0 !important;
+    margin-top: 2.5vh;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 1s ease-in-out; /* Animation for color transition */
+    height: 95vh;
+  
+    
+}
+
+#skills{
+  background-color:#f4f9fc;
+  width: 95%;
+  min-height: 95vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5vh !important;
+}
+
+#writingskills{
+  width:50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height:100%;
+}
+
+#writingskills button{
+  background: none !important;
+  width:200px;
+  height:50px;
+  border-radius: 30px;
+  transition: ease-in-out 0.2s;
+}
+#writingskills button:hover{
+  background-color: #D1E7F1 !important;
+  color:white;
+}
+
+#writingskills p{
+  font-size: 20px;
+  width: 70%;
+  text-align: center;
+}
+
+#languages{
+  display: flex;
+  flex-direction: column;
+  width:50%;
+  align-items: center;
+  justify-content: center;
+  height:100%;
+
+}
+#languages img{
+  padding:20px;
+}
+
+
+.noto-sans{
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: #0f1b61;
+  }
+
+a{
+    font-size: 20px;
+    text-decoration: none;
+  }
+  .noto-sans b{
+    font-weight: bolder;
+  }
+
+  h1{
+    font-size: 48px;
+  }
+  h3{
+    font-size: 28px;
+    max-width: 526.72px;
+  }
+  
+  #text{
+    width:50%;
+    height: 80vh !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+    margin: 0 !important;
+    padding: 0 !important;
+
+  }
+
+  
+  #image{
+    width:50% !important;
+    display: flex;
+    justify-content: center;
+    height: 80vh !important;
+   
+    align-items: center;
+    
+  }
+
+  #dropdownmen{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-evenly !important;
+    
+    
+
+  }
+
+  #dropdownmen .mendesc a{ 
+    font-size: 35px;
+    font-weight: 900;
+    width:50%;
+    text-align: center;
+  }
+  #dropdownmen .mendesc a:hover{ 
+    color:white;
+    cursor: pointer; 
+  }
+  #socials{
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center;
+
+  }
+  #socials a{
+    padding:30px;
+    transition:cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  #socials a:hover{
+    transform: translate(0, -5px);
+  }
+
+
+
+
+ #image img{
+  width: auto !important;
+  height:400px !important;
+
+
+ }
+  #text #name{
+ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  #text div h1{
+    margin: 0 !important;
+   
+  }
+
+  .mendesc{
+    display: flex;
+    flex-direction: row;
+    width: 100% !important;
+   
+  }
+  .mendesc h3{
+    font-size: 15px;
+    width: 50%;
+  }
+
+
+  #main{
+    display: flex;
+    flex-direction: row !important;
+    min-height: 85vh;
+    width:100%;
+  }
+
+  #menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 15vh !important;
+    align-items: center;
+  }
+
+
+  #menu div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+  }
+
+  #menu img{
+    height: 130px;
+    width: 80px;
+    padding-left: 10px;
+    object-fit:cover;
+   
+  }
+
+  .spacing {
+    letter-spacing: 3px;
+    transition: letter-spacing 0.3s ease; /* Smooth transition */
+    display: inline-block; /* Treats each letter individually */
+  }
+
+  .vertical{
+    font-size: 40px;
+    font-weight: 100 !important;
+    margin-right: 10px ;
+  }
+  
+  .spacing:hover {
+    letter-spacing: 8px;
+    cursor: pointer; 
+  }
+
+  .margin-text{
+    padding-right: 20px;
+  }
+
+  .imageemail{
+    height: 30px !important;
+    width: 30px !important;
+    color:white;
+    padding-right: 20px;
+  }
+
+  
+  .new-section {
+    padding: 20px;
+    background-color: #e0f2f1;
+    margin: 10px;
+    border-radius: 8px;
+    font-size: 18px;
+    opacity: 0;
+    transform: translateX(-100%); /* Slide in from left */
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.new-section.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+@keyframes fadeInBackground {
+  0% {
+    background-color: #f4f9fc;  /* Start with original color */
+    transform: translateY(-100%); /* Start from top */
+  }
+  100% {
+    background-color: #B9DBEA; /* End with the target color */
+    transform: translateY(0); /* End at normal position */
+  }
+}
+
+.bluebox {
+  background-color: #f4f9fc; /* Default color */
+  transition: background-color 1s ease-in-out;
+}
+
+.bluebox.fade-in {
+  animation: fadeInBackground 1s ease-in-out forwards;
+  background-color: #B9DBEA; /* Ensure the background color stays after the animation */
+  overflow-y: hidden;
+  
+}
+
+
+@keyframes fadeInSocials {
+  0% {
+    opacity: 0;
+    transform: translateY(50px); /* Start below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at normal position */
+  }
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px); /* Start from left */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* End at normal position */
+  }
+}
+
+
+#socials img {
+  opacity: 0;
+  animation: fadeInSocials 1s ease forwards; /* Animation will start once triggered */
+}
+
+#text {
+  opacity: 0;
+  animation: fadeInText 1s ease-in-out forwards; /* Triggered when menu is clicked */
+}
+
+
+.mendesc .noto-sans {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.mendesc .noto-sans:hover {
+  color: #3498db;
+  transform: translateY(-3px);
+}
+.imageemail {
+  animation: pulse 2s infinite;
+}
+
+
+
+/*** Media Screen ***/
+@media screen and (max-width: 1216px) {
+  #text h1 {
+    font-size: 40px !important;
+  }
+
+  #text h3 {
+    font-size: 20px !important;
+    padding-left: 30px;
+    padding-right: 10px;
+  }
+
+
+  
+}
+
+@media screen and (max-width: 941px) {
+  #name h1 {
+    font-size: 30px !important;
+  }
+
+  #text h3 {
+    font-size: 15px !important;
+    padding-left: 30px;
+    padding-right: 10px;
+  }
+  .bluebox.fade-in #text{
+    padding-left: 10px;
+    
+
+  }
+
+  .bluebox.fade-in #image{
+    display: none;
+  }
+  .bluebox.fade-in #text{
+    justify-content: center;
+    height:80vh !important;
+  }
+}
+
+@media screen and (max-width: 850px) {
+
+  
+  #name{
+    flex-direction: row !important;
+    
+  }
+  #name h1{
+    padding: 5px !important;
+  }
+  #main {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  #text {
+    height: auto !important;
+    width: 90%;
+  }
+
+  #image {
+    height: 45% !important;
+    width: 90%;
+  }
+
+  #image img {
+    height: 290px !important;
+    width: auto !important;
+  }
+
+  #skills {
+    flex-wrap: wrap;
+  }
+
+  #languages {
+    width: 90%;
+    flex-direction: row !important;
+  }
+
+  #writingskills {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 573px) {
+ 
+
+  #languages img {
+    height: 50px !important;
+    width: 50px !important;
+  }
+
+  #text h3 {
+    font-size: 15px !important;
+    padding-left: 30px;
+    padding-right: 10px;
+  }
+
+  #menu a {
+    font-size: 15px;
+  }
+
+  #menu img, .imageemail {
+    height: 100px;
+    width: 100px;
+  }
+
+  .bluebox.fade-in #text a{
+    font-size: 23px;
+  }
+  #text{
+    width: 100%;
+  }
+
+}
+@media screen and (max-width: 513px) {
+  #name h1{
+    font-size: 26px !important;
+  }
+}
+@media screen and (max-width: 480px) {
+  #name{
+    flex-direction: column !important;
+    align-items: center;
+  }
+  #text h3 {
+    font-size: 12px !important;
+    padding-left: 30px;
+    padding-right: 10px;
+  }
+  #menu a {
+    font-size: 12px;
+  }
+
+  #menu img {
+    height: 50px;
+    width: 50px;
+  }
+
+  #languages img {
+    height: 35px !important;
+    width: 35px !important;
+  }
+
+#writingskills p{
+  font-size: 15px !important ;
+}
+
+  .imageemail {
+    height: 20px !important;
+    width: 20px !important;
+    padding:4px!important;
+  }
+}
+
+
+@media screen and (max-width: 380px){
+  
+  #languages img {
+    height: 30px !important;
+    width: 30px !important;
+  }
+  
+}
+
+
+
+@media screen and (max-width: 356px){
+  
+  #languages img {
+    height: 25px !important;
+    width: 25px !important;
+  }
+  
+}
