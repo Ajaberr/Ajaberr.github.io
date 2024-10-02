@@ -26,7 +26,7 @@ body{
     display: flex;
     flex-direction: column;
     transition: background-color 1s ease-in-out; /* Animation for color transition */
-    height: 95vh;
+    
   
     
 }
@@ -301,6 +301,9 @@ a{
   background-color: #B9DBEA; /* Ensure the background color stays after the animation */
   overflow-y: hidden;
   
+}
+.bluebox.fade-in #main{
+  min-height:0;
 }
 
 
