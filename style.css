@@ -213,7 +213,7 @@ a{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 15vh !important;
+    height: 10vh !important;
     align-items: center;
   }
 
