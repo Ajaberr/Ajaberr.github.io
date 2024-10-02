@@ -597,7 +597,10 @@ html {
 
 /** Media Queries **/
 @media screen and (max-width: 1320px) {
- 
+  #Projects div{
+    padding-bottom: 100px;
+    
+  }
   #toc{
     width: 50%;
     min-width: 300px !important;
