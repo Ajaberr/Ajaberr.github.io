@@ -263,6 +263,13 @@ a{
     justify-content: center !important;
 }
 
+#section6 .text h1{
+  font-size: 36px;
+}
+#section6 .text p{
+  font-size: 16px !important;
+}
+
 
 
 .text h1{
@@ -311,6 +318,14 @@ a{text-decoration:  none;}
     width:100%;
     background-color:#F7F8F9 !important;
     justify-content: space-evenly;
+}
+#section6{
+  display: flex;
+  flex-direction: row;
+  min-height:100vh;
+  width:100%;
+  background-color:#F7F8F9 !important;
+  justify-content: space-evenly;
 }
 
 /* This is for dropdown */
@@ -605,7 +620,7 @@ html {
     width: 50%;
     min-width: 300px !important;
   }
-  #section4 .image{
+  #section4 .image, #section6 .image{
     width:40% !important;
     height: auto !important;
   }
@@ -628,7 +643,7 @@ html {
     
   }
 
-  #section4 .image{
+  #section4 .image, #section6 .image{
     width:90% !important;
     height: auto !important;
   }
@@ -648,7 +663,7 @@ html {
 
  
   
-  #section2, #section4{
+  #section2, #section4, #section6{
     width: 100%;
     flex-wrap: wrap-reverse;
     min-height: 100vh;
