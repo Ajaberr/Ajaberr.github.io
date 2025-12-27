@@ -1,0 +1,10 @@
+.particle-text {
+  width: 100%;
+  height: 120px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.particle-text.ready {
+  opacity: 1;
+}

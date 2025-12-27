@@ -1,0 +1,598 @@
+/* ===== NARUTO ENTRANCE SCREEN ===== */
+.naruto-entrance {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #0f0f1a 100%);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  overflow: hidden;
+}
+
+/* ===== ANIMATED BACKGROUND ===== */
+.entrance-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+/* Floating Clouds */
+.cloud {
+  position: absolute;
+  background: radial-gradient(ellipse, rgba(255, 107, 0, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(40px);
+  animation: floatCloud 20s ease-in-out infinite;
+}
+
+.cloud-1 {
+  width: 600px;
+  height: 300px;
+  top: 10%;
+  left: -10%;
+  animation-delay: 0s;
+}
+
+.cloud-2 {
+  width: 500px;
+  height: 250px;
+  top: 60%;
+  right: -5%;
+  animation-delay: -7s;
+  background: radial-gradient(ellipse, rgba(255, 50, 50, 0.08) 0%, transparent 70%);
+}
+
+.cloud-3 {
+  width: 400px;
+  height: 200px;
+  bottom: 20%;
+  left: 30%;
+  animation-delay: -14s;
+  background: radial-gradient(ellipse, rgba(255, 165, 0, 0.06) 0%, transparent 70%);
+}
+
+@keyframes floatCloud {
+  0%, 100% { transform: translateX(0) translateY(0); }
+  25% { transform: translateX(30px) translateY(-20px); }
+  50% { transform: translateX(-20px) translateY(10px); }
+  75% { transform: translateX(20px) translateY(-10px); }
+}
+
+/* Falling Leaves */
+.leaves {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.leaf {
+  position: absolute;
+  top: -50px;
+  font-size: 1.5rem;
+  animation: fallLeaf linear infinite;
+  opacity: 0.6;
+}
+
+@keyframes fallLeaf {
+  0% {
+    transform: translateY(-50px) rotate(0deg) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg) translateX(100px);
+    opacity: 0;
+  }
+}
+
+/* Konoha Symbol Background */
+.konoha-symbol {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  opacity: 0.03;
+  animation: rotateSymbol 60s linear infinite;
+}
+
+.konoha-svg {
+  width: 100%;
+  height: 100%;
+  color: #FF6B00;
+}
+
+@keyframes rotateSymbol {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ===== LOADING SCREEN ===== */
+.loading-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.loading-content {
+  text-align: center;
+}
+
+/* Loading Icon */
+.loading-icon {
+  font-size: 5rem;
+  font-weight: 900;
+  color: #FF6B00;
+  text-shadow: 
+    0 0 40px rgba(255, 107, 0, 0.9),
+    0 0 80px rgba(255, 107, 0, 0.6);
+  animation: iconPulse 1.5s ease-in-out infinite;
+  margin-bottom: 1.5rem;
+}
+
+@keyframes iconPulse {
+  0%, 100% { 
+    transform: scale(1);
+    text-shadow: 0 0 40px rgba(255, 107, 0, 0.9), 0 0 80px rgba(255, 107, 0, 0.6);
+  }
+  50% { 
+    transform: scale(1.1);
+    text-shadow: 0 0 60px rgba(255, 107, 0, 1), 0 0 100px rgba(255, 107, 0, 0.8);
+  }
+}
+
+.loading-text {
+  font-size: 1.5rem;
+  color: #FF6B00;
+  margin: 1.5rem 0 1rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-shadow: 0 0 20px rgba(255, 107, 0, 0.5);
+}
+
+.chakra-bar {
+  width: 300px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 0 auto;
+  border: 1px solid rgba(255, 107, 0, 0.3);
+}
+
+.chakra-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #FF6B00, #FF8C00, #FFA500);
+  border-radius: 4px;
+  transition: width 0.1s ease-out;
+  box-shadow: 0 0 20px rgba(255, 107, 0, 0.6);
+  position: relative;
+}
+
+.chakra-fill::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4));
+}
+
+.loading-tip {
+  margin-top: 1.5rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.875rem;
+  font-style: italic;
+  animation: blink 2s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+/* ===== MENU SCREEN ===== */
+.menu-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  animation: menuFadeIn 0.8s ease-out;
+  padding: 2rem;
+}
+
+.menu-screen.exit {
+  animation: menuFadeOut 0.5s ease-in forwards;
+}
+
+@keyframes menuFadeIn {
+  0% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes menuFadeOut {
+  0% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(1.1); }
+}
+
+/* Game Title */
+.game-title {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  animation: titleSlide 1s ease-out;
+}
+
+@keyframes titleSlide {
+  0% { transform: translateY(-50px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.title-decoration {
+  font-size: 2rem;
+  animation: floatKunai 3s ease-in-out infinite;
+}
+
+.title-decoration.right {
+  animation-delay: -1.5s;
+}
+
+@keyframes floatKunai {
+  0%, 100% { transform: translateY(0) rotate(-45deg); }
+  50% { transform: translateY(-10px) rotate(-45deg); }
+}
+
+.title-content {
+  text-align: center;
+}
+
+.main-title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin: 0;
+}
+
+.title-ahmed {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #FF6B00;
+  letter-spacing: 12px;
+  text-shadow: 
+    0 0 40px rgba(255, 107, 0, 0.6),
+    0 4px 0 #cc5500,
+    0 8px 0 #993d00;
+  animation: glowPulse 2s ease-in-out infinite;
+}
+
+.title-jaber {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #FFFFFF;
+  letter-spacing: 20px;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes glowPulse {
+  0%, 100% { text-shadow: 0 0 40px rgba(255, 107, 0, 0.6), 0 4px 0 #cc5500, 0 8px 0 #993d00; }
+  50% { text-shadow: 0 0 60px rgba(255, 107, 0, 0.9), 0 4px 0 #cc5500, 0 8px 0 #993d00; }
+}
+
+.subtitle {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 6px;
+  font-style: italic;
+}
+
+/* Game Menu */
+.game-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-width: 320px;
+}
+
+.menu-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background: transparent;
+  border: 2px solid rgba(255, 107, 0, 0.3);
+  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-option::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 107, 0, 0.1), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+}
+
+.menu-option:hover::before,
+.menu-option.selected::before {
+  transform: translateX(100%);
+}
+
+.menu-option.selected {
+  border-color: #FF6B00;
+  color: #FF6B00;
+  background: rgba(255, 107, 0, 0.1);
+  box-shadow: 
+    0 0 20px rgba(255, 107, 0, 0.3),
+    inset 0 0 20px rgba(255, 107, 0, 0.1);
+  animation: selectedPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes selectedPulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(255, 107, 0, 0.3), inset 0 0 20px rgba(255, 107, 0, 0.1); }
+  50% { box-shadow: 0 0 30px rgba(255, 107, 0, 0.5), inset 0 0 30px rgba(255, 107, 0, 0.15); }
+}
+
+.option-indicator {
+  width: 20px;
+  color: #FF6B00;
+  font-size: 0.875rem;
+  animation: bounceArrow 0.5s ease-in-out infinite;
+}
+
+.option-indicator.right {
+  animation-delay: -0.25s;
+}
+
+@keyframes bounceArrow {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(4px); }
+}
+
+.option-indicator.right {
+  animation-name: bounceArrowRight;
+}
+
+@keyframes bounceArrowRight {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(-4px); }
+}
+
+.option-text {
+  flex: 1;
+  text-align: center;
+}
+
+/* Menu Footer */
+.menu-footer {
+  text-align: center;
+  animation: fadeInUp 1s ease-out 0.5s both;
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.press-start {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  animation: blinkText 1.5s ease-in-out infinite;
+}
+
+@keyframes blinkText {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+.scroll-decoration {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.scroll-line {
+  width: 80px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 107, 0, 0.5), transparent);
+}
+
+.scroll-text {
+  font-size: 1.5rem;
+  color: #FF6B00;
+  text-shadow: 0 0 10px rgba(255, 107, 0, 0.5);
+}
+
+/* Corner Decorations */
+.corner-decoration {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  border: 2px solid rgba(255, 107, 0, 0.2);
+  pointer-events: none;
+}
+
+.corner-decoration.top-left {
+  top: 20px;
+  left: 20px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.corner-decoration.top-right {
+  top: 20px;
+  right: 20px;
+  border-left: none;
+  border-bottom: none;
+}
+
+.corner-decoration.bottom-left {
+  bottom: 20px;
+  left: 20px;
+  border-right: none;
+  border-top: none;
+}
+
+.corner-decoration.bottom-right {
+  bottom: 20px;
+  right: 20px;
+  border-left: none;
+  border-top: none;
+}
+
+/* ===== EXIT OVERLAY ===== */
+.exit-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.9);
+  animation: overlayFadeIn 0.2s ease-out;
+}
+
+@keyframes overlayFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.jutsu-circle {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.jutsu-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid #FF6B00;
+  animation: expandRing 0.8s ease-out forwards;
+}
+
+.ring-1 {
+  width: 100%;
+  height: 100%;
+  animation-delay: 0s;
+}
+
+.ring-2 {
+  width: 150%;
+  height: 150%;
+  animation-delay: 0.1s;
+  border-color: #FF8C00;
+}
+
+.ring-3 {
+  width: 200%;
+  height: 200%;
+  animation-delay: 0.2s;
+  border-color: #FFA500;
+}
+
+@keyframes expandRing {
+  0% { transform: scale(0); opacity: 1; }
+  100% { transform: scale(3); opacity: 0; }
+}
+
+.jutsu-center {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #FF6B00;
+  text-shadow: 0 0 40px rgba(255, 107, 0, 1), 0 0 80px rgba(255, 107, 0, 0.8);
+  animation: spinCenter 0.5s ease-out, fireGlow 0.3s ease-in-out infinite alternate;
+  z-index: 10;
+}
+
+@keyframes spinCenter {
+  0% { transform: scale(0) rotate(-180deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .title-ahmed {
+    font-size: 2.5rem;
+    letter-spacing: 8px;
+  }
+
+  .title-jaber {
+    font-size: 1.5rem;
+    letter-spacing: 12px;
+  }
+
+  .game-menu {
+    min-width: 280px;
+  }
+
+  .menu-option {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .konoha-symbol {
+    width: 300px;
+    height: 300px;
+  }
+
+  .corner-decoration {
+    width: 50px;
+    height: 50px;
+  }
+
+  .title-decoration {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .title-ahmed {
+    font-size: 2rem;
+    letter-spacing: 6px;
+  }
+
+  .title-jaber {
+    font-size: 1.25rem;
+    letter-spacing: 8px;
+  }
+
+  .subtitle {
+    font-size: 0.75rem;
+    letter-spacing: 4px;
+  }
+
+  .chakra-bar {
+    width: 250px;
+  }
+}
+

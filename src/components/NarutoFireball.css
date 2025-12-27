@@ -1,0 +1,21 @@
+.naruto-fireball-container {
+  position: fixed;
+  top: 0;
+  right: 10%;
+  width: 400px;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.naruto-fireball-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+@media (max-width: 768px) {
+  .naruto-fireball-container {
+    width: 250px;
+    right: 5%;
+  }
+}
